@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- Nombre de la aplicacion -->
 <html lang="es" ng-app="angularjsApp">
 <head>
     <meta charset="UTF-8">
@@ -72,7 +71,7 @@
         */
         let bootstrapTheme=localStorage.getItem("theme");function colormode_onchange(e){}function getPreferredTheme(){return bootstrapTheme||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")}function detectSystemTheme(){return window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}function filterTheme(e){return"auto"==e?detectSystemTheme():e}function setTheme(e){document.documentElement.setAttribute("data-bs-theme",filterTheme(e))}function showActiveTheme(e){$("[data-bs-theme-value]").removeClass("bg-primary text-white active"),$(`[data-bs-theme-value="${e}"]`).addClass("bg-primary text-white active")}$(document).on("click","[data-bs-theme-value]",function(e){bootstrapTheme=$(this).attr("data-bs-theme-value"),localStorage.setItem("theme",bootstrapTheme),setTheme(bootstrapTheme),showActiveTheme(bootstrapTheme),colormode_onchange(bootstrapTheme)}),document.addEventListener("DOMContentLoaded",function(e){setTheme(bootstrapTheme=getPreferredTheme()),showActiveTheme(bootstrapTheme)});
     </script>
-    
+
     <script src="{{ url_for("static", filename="js/app.js") }}"></script>
 </head>
 <body>
@@ -81,7 +80,6 @@
          {{ '{{ angularjsHora }}' }}
     </div>
 
-    <!-- rutas, solo cambiar el nombre no el "#/" -->
     <ul class="app-menu nav nav-underline justify-content-center">
         <li class="nav-item">
             <a class="nav-link" href="#/">Inicio</a>
