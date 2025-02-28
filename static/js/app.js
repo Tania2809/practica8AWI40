@@ -8,12 +8,10 @@ function activeMenuOption(href) {
     .attr("aria-current", "page")
 }
 
-// Hay que modificarlo para el nombre de la aplicacion
 const app = angular.module("angularjsApp", ["ngRoute"])
 app.config(function ($routeProvider, $locationProvider) {
     $locationProvider.hashPrefix("")
 
-    // y para las rutas
     $routeProvider
     .when("/", {
         templateUrl: "/app",
@@ -82,12 +80,9 @@ app.run(["$rootScope", "$location", "$timeout", function($rootScope, $location, 
     })
 }])
 
-// Hay que modificarlo para los controladores
 app.controller("appCtrl", function ($scope, $http) {
-    // alert("Hola, soy el controlador app")
 })
 app.controller("productosCtrl", function ($scope, $http) {
-    // alert("Hola, soy el controlador productos")
 })
 app.controller("alumnosCtrl", function ($scope, $http) {
 })
