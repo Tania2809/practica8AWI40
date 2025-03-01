@@ -17,25 +17,13 @@ app.config(function ($routeProvider, $locationProvider) {
         templateUrl: "/app",
         controller: "appCtrl"
     })
-    .when("/productos", {
-        templateUrl: "/productos",
-        controller: "productosCtrl"
+    .when("/rentas", {
+        templateUrl: "/rentas",
+        controller: "rentasCtrl"
     })
-    .when("/alumnos", {
-        templateUrl: "/alumnos",
-        controller: "alumnosCtrl"
-    })
-    .when("/ventas", {
-        templateUrl: "/ventas",
-        controller: "ventasCtrl"
-    })
-    .when("/reportes", {
-        templateUrl: "/reportes",
-        controller: "reportesCtrl"
-    })
-    .when("/notificaciones", {
-        templateUrl: "/notificaciones",
-        controller: "notificacionesCtrl"
+    .when("/trajes", {
+        templateUrl: "/trajes",
+        controller: "trajesCtrl"
     })
     .otherwise({
         redirectTo: "/"
@@ -82,15 +70,9 @@ app.run(["$rootScope", "$location", "$timeout", function($rootScope, $location, 
 
 app.controller("appCtrl", function ($scope, $http) {
 })
-app.controller("productosCtrl", function ($scope, $http) {
+app.controller("rentasCtrl", function ($scope, $http) {
 })
-app.controller("alumnosCtrl", function ($scope, $http) {
-})
-app.controller("ventasCtrl", function ($scope, $http) {
-})
-app.controller("reportesCtrl", function ($scope, $http) {
-})
-app.controller("notificacionesCtrl", function ($scope, $http) {
+app.controller("trajesCtrl", function ($scope, $http) {
 })
 
 const DateTime = luxon.DateTime
